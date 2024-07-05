@@ -1,2 +1,9 @@
 <!-- This is a list of URLs that Lychee should ignore. -->
 <!-- False Positive URL -->
+
+https://www.zenrows.com/
+https://www.udemy.com/developers/instructor/
+https://jooble.org/api/about
+https://www.fbi.gov/wanted/api
+https://developer.uber.com/products
+https://www.damsuccess.com/hc/en-us/articles/202134055-REST-API
