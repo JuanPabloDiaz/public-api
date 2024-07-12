@@ -1,9 +1,27 @@
 <!-- This is a list of URLs that Lychee should ignore. -->
 <!-- False Positive URL -->
 
-https://www.zenrows.com/
-https://www.udemy.com/developers/instructor/
-https://jooble.org/api/about
-https://www.fbi.gov/wanted/api
-https://developer.uber.com/products
+https://www.velib-metropole.fr/donnees-open-data-gbfs-du-service-velib-metropole
 https://www.damsuccess.com/hc/en-us/articles/202134055-REST-API
+https://www.digikey.com/en/resources/api-solutions
+https://www.udemy.com/developers/instructor
+https://cheetaho.com/docs/getting-started
+https://collection.cooperhewitt.org/api
+https://www.bb.com.br/site/developers
+https://www.ups.com/upsdeveloperkit
+https://securitytrails.com/corp/api
+https://developer.uber.com/products
+https://www.discogs.com/developers
+https://opendata.city-adm.lviv.ua
+https://www.fbi.gov/wanted/api
+https://www.saidit.net/dev/api
+https://developers.upwork.com
+https://jooble.org/api/about
+https://search.censys.io/api
+https://api.squiggle.com.au
+https://www.pexels.com/api
+https://api-docs.igdb.com
+https://www.geoplugin.com
+https://www.zenrows.com
+https://www.dati.gov.it
+https://docs.genius.com
