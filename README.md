@@ -305,7 +305,6 @@
 | [Non-Working Days](https://github.com/gadael/icsdb) | Database of ICS files for non working days | No | Yes | Unknown |
 | [Non-Working Days](https://isdayoff.ru) | Simple REST API for checking working, non-working or short days for Russia, CIS, USA and other | No | Yes | Yes |
 | [OpenHolidays API](https://www.openholidaysapi.org/) | Public and school holidays for many countries via an open REST API | No | Yes | Yes |
-| [Orthodox Church Calendar](http://orthodox-calendar.org/swagger-ui/index.html?urls.primaryName=public#/public-controller/getData) | Orthodox Church calendar | No | No | Unknown |
 | [Russian Calendar](https://github.com/egno/work-calendar) | Check if a date is a Russian holiday or not | No | Yes | No |
 | [UK Bank Holidays](https://www.gov.uk/bank-holidays.json) | Bank holidays in England and Wales, Scotland and Northern Ireland | No | Yes | Unknown |
 
@@ -541,7 +540,6 @@
 | [OneSignal](https://documentation.onesignal.com/docs/onesignal-api) | Self-serve customer engagement solution for Push Notifications, Email, SMS & In-App | `apiKey`| Yes | Unknown |
 | [Open Page Rank](https://www.domcop.com/openpagerank/) | API for calculating and comparing metrics of different websites using Page Rank algorithm | `apiKey`| Yes | Unknown |
 | [OpenAPIHub](https://hub.openapihub.com/) | The All-in-one API Platform | `X-Mashape-Key` | Yes | Unknown |
-| [OpenGraphr](https://opengraphr.com/docs/1.0/overview) | Really simple API to retrieve Open Graph data from an URL | `apiKey`| Yes | Unknown |
 | [oyyi](https://oyyi.xyz/docs/1.0) | API for Fake Data, image/video conversion, optimization, pdf optimization and thumbnail generation | No | Yes | Yes |
 | [PageCDN](https://pagecdn.com/docs/public-api) | Public API for javascript, css and font libraries on PageCDN | `apiKey`| Yes | Yes |
 | [Postman](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a) | Tool for testing APIs | `apiKey`| Yes | Unknown |
@@ -920,7 +918,6 @@
 | [adresse.data.gouv.fr](https://adresse.data.gouv.fr) | Address database of France, geocoding and reverse | No | Yes | Unknown |
 | [Airtel IP](https://sys.airtel.lv/ip2country/1.1.1.1/?full=true) | IP Geolocation API. Collecting data from multiple sources | No | Yes | Unknown |
 | [Apiip](https://apiip.net/) | Get location information by IP address | `apiKey` | Yes | Yes |
-| [APlace.io](https://aplace.io/en) | Address autocomplete and reverse geocoding API | `apiKey` | Yes | Yes |
 | [Battuta](http://battuta.medunes.net) | A (country/region/city) in-cascade location API | `apiKey` | No | Unknown |
 | [BigDataCloud's IP Geolocation API](https://www.bigdatacloud.com/ip-geolocation) | Provides fast and accurate IP geolocation APIs along with security checks and confidence area. | `apiKey` | Yes | Yes |
 | [BigDataCloud's Reverse Geocoding API](https://www.bigdatacloud.com/reverse-geocoding) | Get rich locality information from the geographical coordinates. | `apiKey` | Yes | Yes |
@@ -1478,7 +1475,6 @@
 | [GitGuardian](https://api.gitguardian.com/doc) | Scan files for secrets (API Keys, database credentials) | `apiKey` | Yes | No |
 | [GreyNoise](https://docs.greynoise.io/reference/get_v3-community-ip) | Query IPs in the GreyNoise dataset and retrieve a subset of the full IP context data | `apiKey` | Yes | Unknown |
 | [HackerOne](https://api.hackerone.com/) | The industry’s first hacker API that helps increase productivity towards creative bug bounty hunting | `apiKey` | Yes | Unknown |
-| [Hashable](https://hashable.space/pages/api/) | A REST API to access high level cryptographic functions and methods | No | Yes | Yes |
 | [HaveIBeenPwned](https://haveibeenpwned.com/API/v3) | Passwords which have previously been exposed in data breaches | `apiKey` | Yes | Unknown |
 | [Intelligence X](https://github.com/IntelligenceX/SDK/blob/master/Intelligence%20X%20API.pdf) | Perform OSINT via Intelligence X | `apiKey` | Yes | Unknown |
 | [LoginRadius](https://www.loginradius.com/docs/) | Managed User Authentication Service | `apiKey` | Yes | Yes |
