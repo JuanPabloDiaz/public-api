@@ -15,14 +15,61 @@ async function run() {
     pull_number: prNumber,
   });
 
+  const comments = [];
+
+  // Check 1: New API links in README.md
   const readmeFile = filesChanged.data.find(
     (file) => file.filename.toLowerCase() === "readme.md"
   );
-  if (!readmeFile) {
-    console.log("README.md not modified. Skipping.");
-    return;
+
+  if (readmeFile) {
+    console.log("README.md modified. Checking for new API links...");
+    const newLinks = await checkForNewApiLinks(owner, repo, pr);
+    if (newLinks.length > 0) {
+      const linkComment =
+        newLinks.length === 1
+          ? `🔍 **API link:** ${newLinks[0]}`
+          : [
+              "🔍 **New API links:**",
+              "",
+              ...newLinks.map((link) => `- ${link}`),
+            ].join("\n");
+      comments.push(linkComment);
+    }
   }
 
+  // Check 2: Edits to /db folder
+  const dbFiles = filesChanged.data.filter((file) =>
+    file.filename.startsWith("db/")
+  );
+
+  if (dbFiles.length > 0) {
+    console.log(
+      `DB folder modifications detected in ${dbFiles.length} file(s)`
+    );
+    const dbWarning =
+      "❗️ **Warning:** The `/db` folder is auto-generated, so please do not edit it. Changes related to public APIs should happen in the `README.md` file.";
+    comments.push(dbWarning);
+  }
+
+  // Post all comments as a single comment
+  if (comments.length > 0) {
+    const finalComment = comments.join("\n\n---\n\n");
+
+    await octokit.rest.issues.createComment({
+      owner,
+      repo,
+      issue_number: prNumber,
+      body: finalComment,
+    });
+
+    console.log("Comment posted with all checks.");
+  } else {
+    console.log("No issues found in this PR.");
+  }
+}
+
+async function checkForNewApiLinks(owner, repo, pr) {
   const baseRes = await octokit.rest.repos.getContent({
     owner,
     repo,
@@ -63,26 +110,7 @@ async function run() {
     console.log("New links:", newLinks);
   }
 
-  if (newLinks.length === 0) {
-    console.log("No new links found.");
-    return;
-  }
-
-  const commentBody =
-    newLinks.length === 1
-      ? `**API link:** ${newLinks[0]}`
-      : ["**New API links:**", "", ...newLinks.map((link) => `- ${link}`)].join(
-          "\n"
-        );
-
-  await octokit.rest.issues.createComment({
-    owner,
-    repo,
-    issue_number: prNumber,
-    body: commentBody,
-  });
-
-  console.log("Comment posted.");
+  return newLinks;
 }
 
 run().catch((error) => {

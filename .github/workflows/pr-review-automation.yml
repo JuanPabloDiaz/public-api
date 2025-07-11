@@ -1,13 +1,14 @@
-name: Comment on new API links
+name: PR Review Automation
 
 on:
   pull_request:
     paths:
       - README.md
+      - db/**
     types: [opened, synchronize]
 
 jobs:
-  comment-links:
+  pr-review-automation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,7 +21,7 @@ jobs:
       - name: Install deps (if needed)
         run: npm install @actions/github
 
-      - name: Run API link extraction
-        run: node scripts/extract-api-links.js
+      - name: Run PR review automation
+        run: node scripts/pr-review-automation.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
